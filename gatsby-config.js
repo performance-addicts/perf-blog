@@ -13,7 +13,7 @@ module.exports = {
     // Can be used for e.g. JSONLD
     siteHeadline: `Web Performance Blog`,
     // Will be used to generate absolute URLs for og:image etc.
-    siteUrl: ``,
+    siteUrl: `https://tapestry-performance.netlify.app`,
     // Used for SEO
     siteDescription: `A blog about Web Performance`,
     // Will be set on the <html /> tag
