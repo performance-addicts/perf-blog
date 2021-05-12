@@ -7,7 +7,7 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE;
 module.exports = {
   siteMetadata: {
     siteTitleAlt: `Minimal Blog - Gatsby Theme`,
-    siteTitle: `Tapestry Performance Blog`,
+    siteTitle: `Tapestry Performance`,
     // Default title of the page
     siteTitleAlt: `Perf Blog`,
     // Can be used for e.g. JSONLD
