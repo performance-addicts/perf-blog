@@ -1,10 +1,14 @@
 require(`dotenv`).config({
   path: `.env`,
 });
-
+const proxy = require("http-proxy-middleware");
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE;
 
 module.exports = {
+  // proxy: {
+  //   prefix: "./netlify/functions",
+  //   url: "http://localhost:8888/.netlify/functions",
+  // },
   siteMetadata: {
     siteTitleAlt: `Minimal Blog - Gatsby Theme`,
     siteTitle: `Tapestry Performance`,
