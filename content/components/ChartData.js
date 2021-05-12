@@ -7,9 +7,7 @@ export default function ChartData({ testId }) {
 
   useEffect(() => {
     async function getData() {
-      const response = await fetch(
-        `http://localhost:8888/.netlify/functions/rigor?id=${testId}`
-      );
+      const response = await fetch(`/.netlify/functions/rigor?id=${testId}`);
       console.log(response);
       const data = await response.json();
       console.log("DATA", data);

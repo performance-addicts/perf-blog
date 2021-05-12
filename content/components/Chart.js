@@ -11,14 +11,18 @@ export default function Chart({ data, xAxisKey }) {
     });
     return (
       <div key={serie.position}>
-        {/* <Center>
-          <Text color="grey.600" my={4} fontSize="xl">
+        <div>
+          <h3>
             Page {index + 1}:{" "}
-            <Link fontStyle="italic" href={serie.data[0].url} isExternal>
+            <a
+              href={serie.data[0].url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {serie.data[0].url}
-            </Link>
-          </Text>
-        </Center> */}
+            </a>
+          </h3>
+        </div>
         <AreaComp
           serie={serie}
           title="Lighthouse Performance Score"
