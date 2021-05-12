@@ -1,10 +1,21 @@
 require(`dotenv`).config({
   path: `.env`,
 });
-
+const proxy = require("http-proxy-middleware");
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE;
 
 module.exports = {
+  developMiddleware: (app) => {
+    app.use(
+      "/.netlify/functions/",
+      proxy({
+        target: "http://localhost:8888",
+        pathRewrite: {
+          "/.netlify/functions/": "",
+        },
+      })
+    );
+  },
   siteMetadata: {
     siteTitleAlt: `Minimal Blog - Gatsby Theme`,
     siteTitle: `Tapestry Performance`,

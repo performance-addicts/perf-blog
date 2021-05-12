@@ -1,7 +1,9 @@
 const moment = require("moment");
 const fetch = require("node-fetch");
 
-exports.handler = async function () {
+exports.handler = async function (event) {
+  console.log(event);
+  const { id } = event.queryStringParameters;
   const date = {
     start: moment().subtract(14, "days").format("MM-DD"),
     end: moment().format("MM-DD"),
@@ -14,13 +16,13 @@ exports.handler = async function () {
   const headers = {
     method: "GET",
     headers: {
-      "API-KEY": "1qqtUC1rfm3WHcb_U7g1",
+      "API-KEY": process.env.RIGOR_API_KEY,
       "Content-Type": "application/json",
     },
   };
 
   const response = await fetch(
-    generateDataEndpoint(183205, date.start, date.end),
+    generateDataEndpoint(id, date.start, date.end),
     headers
   );
   const data = await response.json();

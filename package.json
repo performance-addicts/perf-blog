@@ -28,9 +28,11 @@
     "moment": "^2.29.1",
     "node-fetch": "^2.6.1",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "recharts": "^2.0.9"
   },
   "devDependencies": {
-    "cross-env": "^7.0.2"
+    "cross-env": "^7.0.2",
+    "http-proxy-middleware": "^0.19.1"
   }
 }
